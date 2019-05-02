@@ -1,0 +1,22 @@
+.card {
+	background-color: #ffffd5;
+	padding: 18px;
+}
+.image {
+	height: 400px;
+	width: 100%
+}
+
+.imageow {
+	height: 300px;
+	width: 100%
+}
+pg
+{
+	background-color: black;
+	padding: 3rem;
+}
+#con{
+	margin-left: 0rem;
+	margin-right: 2rem;
+}

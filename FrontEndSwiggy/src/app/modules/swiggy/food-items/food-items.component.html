@@ -1,0 +1,36 @@
+
+
+
+	
+  <div class="container-fluid">
+    <div class="col-12 col-md-12 col-lg-12">
+			<div class="row">
+        <div class="col-12 col-md-6 col-lg-3 my-4 d-flex" *ngFor="let Food of fooditems">
+					<div class="card  border border-dark">
+						<img class="card-img-top image" src="../assets/images/{{Food.image}}"
+							alt="Food image">
+						<div
+							class="card-body  text-centre d-flex flex-column justify-content-centre">
+							<div class="row">
+								<p class="card-title font-weight-bold">{{Food.name}}({{Food.quantity}} pcs)</p>
+							</div>
+							<div class="row">
+								<p class="font-weight-light">{{Food.description}}</p>
+							</div>
+							<div class="row">
+							<span class="font-weight-bold card-link">Rs {{Food.price}}</span>
+							
+								
+							<span class="font-weight-bold card-link">	<input id={{Food.id}} name="input_{{Food.id}}" [(ngModel)]="inputNumber[Food.id]"  type="number"  min=0 max={{Food.quantity}}></span>	
+								
+							</div>
+							<br>
+							<button id="Add_{{Food.id}}" class="btn btn-primary mt-auto" (click)="addtoCart(Food)" [disabled]="!disableButton(Food)">Add
+								to Cart</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+  </div>

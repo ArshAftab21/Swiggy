@@ -1,0 +1,111 @@
+<div class="container">
+	<div class="col-12 col-md-12 col-lg-12">
+
+		<div class="card border border-warning">
+			<div class="card-body">
+				<div class="row justify-content-md-centre">
+
+					<div class="col-12 col-md-12 col-lg-6">
+
+						<img class="card-img-top image" src="../assets/images/register.jpg" alt="Food image">
+
+					</div>
+					<div class="col-12 col-md-12 col-lg-6">
+
+						<div class="row" style="justify-content: center; align-items: center;">
+							<h4 class="card-title">
+								<strong>Register</strong>
+							</h4>
+						</div>
+						<br>
+						<form #userForm="ngForm">
+							<div class="row form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i
+																class="fa fa-user" aria-hidden="true"></i></span>
+									</div>
+
+									<input id="username" class="form-control" placeholder="Username" pattern="([a-zA-Z]{6,})" (keyup)="onKey($event)" name="userName" [(ngModel)]="user.userName" required #uname="ngModel">
+								</div>
+								<div class="row mx-2">
+									<div *ngIf="uname.errors?.required && userForm.touched" [ngClass]="'error'">
+										<span class="text-danger"> username required.</span>
+									</div>
+									<div *ngIf="uname.errors?.pattern" [ngClass]="'error'">
+										<span class="text-danger">Only alphabets required and of six digit</span>
+									</div>
+									<div *ngIf="displayError()" [ngClass]="'error'">
+											<span class="text-danger">UserName already Exists</span>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="row form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i
+																class="fas fa-key"></i></span>
+									</div>
+									<input id="password" type="password" class="form-control" placeholder="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" name="password" [(ngModel)]="user.password" required
+										#password="ngModel">
+								</div>
+								<div class="row mx-2">
+									<div *ngIf="password.errors?.required && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
+										<span class="text-danger"> Password required. </span>
+									</div>
+									<div *ngIf="password.errors?.pattern && userForm.touched" [ngClass]="'error'">
+										<span class="text-danger">Password should be alphanumeric with atleast one Upercase character and one special character</span>
+									</div>
+					
+								</div>
+							</div>
+							<div class="row form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i
+																class="fas fa-phone"></i></span>
+									</div>
+									<input id="phone" type="text" class="form-control" name="phone" pattern="[0-9]{10,}" placeholder="Phone number" [(ngModel)]="user.phoneNumber" required
+										#phone="ngModel">
+								</div>
+								<div class="row mx-2">
+									<div *ngIf="phone.errors?.required && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
+										<span class="text-danger"> Phone Number required. </span>
+									</div>
+									<div *ngIf="phone.errors?.pattern && userForm.touched" [ngClass]="'error'">
+										<span class="text-danger">Phone number should have only numbers and should be ten digit</span>
+									</div>
+			
+								</div>
+							</div>
+							<div class="row form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+									</div>
+									<input id="email" type="text" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="form-control" name="email" placeholder="Email" [(ngModel)]="user.email" #email="ngModel" required>
+								</div>
+								<div class="row mx-2">
+									<div *ngIf="email.errors?.required && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
+										<span class="text-danger">  Email is required. </span>
+									</div>
+									<div *ngIf="email.errors?.pattern && userForm.touched" [ngClass]="'error'">
+										<span class="text-danger">Enter valid email pattern</span>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="row" style="justify-content: center; align-items: center;">
+								<input id="registerUser" type="submit" class="btn btn-primary" (click)="registerUser()"  [disabled]="!displayRegisterButton()" value="Register">
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

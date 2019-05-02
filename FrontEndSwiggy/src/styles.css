@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.bg {
+
+	background-color: #ffb860fb;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	background-repeat: repeat;
+	background-size: cover;
+}

@@ -1,0 +1,40 @@
+.card {
+	background-color: #ffffd5;
+	padding: 4px;
+	
+}
+
+.image {
+	padding: 2px;
+	height:230px;
+	width: 100%;
+	
+}
+
+.navbar-brand {
+	padding: 2px;
+}
+
+.nav-item {
+	padding: 2px;
+}
+
+.text {
+	margin-left: 2rem;
+}
+
+.bg {
+background-image: url("/assets/images/swiggy.jpg");
+	height: 100%;
+	width: 100%;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	background-repeat: repeat;
+	background-size: cover;
+}
+container-fluid
+{
+	padding: 2rem;
+	margin-left: 2px;
+	margin-right: 2px;
+}

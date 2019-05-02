@@ -1,0 +1,24 @@
+.card {
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	background-color: #ffffd5;
+	padding: 2px;
+}
+
+.modal-content {
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	background-color: #ffffd5;
+	padding: 2px;
+}
+
+.image {
+	padding: 2px;
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+.text {
+	margin-left: 2rem;
+}

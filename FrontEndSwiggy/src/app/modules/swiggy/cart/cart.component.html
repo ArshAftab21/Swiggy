@@ -1,0 +1,69 @@
+<div class="container">
+	<div class="col-12 col-md-12 col-lg-12 ">
+		<div class="card  border border-dark my-2">
+			<div class="card-body" >
+				<div class="card  border border-warning my-3" *ngFor="let food of cartitems">
+					<div class="row">
+
+
+						<div class="col-12 col-md-4 col-lg-3 my-auto">
+							<h5 class="card-title">{{food.name}}({{food.quantity}} items)</h5>
+						</div>
+
+
+						<div class="col-12 col-md-4 col-lg-3 my-auto">
+							<div class="input-group">
+								<div><input name="input_{{food.id}}" [(ngModel)]="inputNumber[food.id]" type="number" id="quantity" placeholder="Remove" min=0 max={{food.quantity}}></div>
+							</div>
+						</div>
+
+
+						<div class="col-12 col-md-4 col-lg-3 my-auto">
+							<p class="font-weight-bold">
+								Rs {{food.price}}
+							</p>
+						</div>
+
+
+						<div class="col-12 col-md-4 col-lg-3 my-auto">
+							<button class="btn btn-primary" (click)="removeFromCart(food)" [disabled]="!disableButton(food)">Update Cart</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card  border border-dark my-2">
+			<div class="card-body" *ngIf="!(displayCartEmpty())">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-6 my-auto">
+						<h3 class="text-left">Subtotal</h3>
+					</div>
+					<div class="col-6 col-md-6 col-lg-6 my-auto">
+						<h3 class="text-right">Rs {{cost}}</h3>
+					</div>
+				</div>
+				<div class="row my-2">
+					<div class="col-6 col-md-6 col-lg-6 my-auto">
+						<p class="text-left font-weight-light">(inclusive of all taxes)</p>
+					</div>
+					<div *ngIf="!(cartitems==null)" class="col-6 col-md-6 col-lg-6 my-auto">
+						
+							<div class="text-right">
+							<button id="placeOrder" class="btn btn-primary" (click)="placeOrder()">Place Order</button>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="card-body" *ngIf="displayCartEmpty()">
+				<div class="row">
+					<div class="col-12 col-md-12 col-lg-12 my-auto">
+						<h3 class="text-left text-danger">You have nothing in your Cart Currently</h3>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

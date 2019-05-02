@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+	crossorigin="anonymous">
+
+<style type="text/css">
+.card {
+	background-color: #ffffd5;
+	padding: 4px;
+}
+
+
+.navbar-brand {
+	padding: 2px;
+}
+
+.nav-item {
+	padding: 2px;
+}
+
+.text {
+	margin-left: 2rem;
+}
+
+.bg {
+	background-image: url("../images/swiggy.jpg");
+	height: 100%;
+	width: 100%;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	background-repeat: repeat;
+	background-size: cover;
+}
+</style>
+</head>
+<body class="bg">
+	<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Swiggy</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<!-- Links -->
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Food
+						Items</a></li>
+			</ul>
+			<ul class="nav navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link" href="#"><i
+						class="fas fa-shopping-cart">Cart</i></a></li>
+				<li class="nav-item"><a class="nav-link" href="#"><i
+						class="fa fa-user" aria-hidden="true">Login</i></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="col-12 col-md-12 col-lg-12 ">
+
+			<div class="card  border border-dark my-2">
+				<div class="card-body">
+					<div class="card  border border-warning my-3 ">
+						<div class="row">
+
+
+							<div class="col-12 col-md-4 col-lg-3 my-auto">
+								<h4 class="card-title">Burger</h4>
+							</div>
+
+
+							<div class="col-12 col-md-4 col-lg-3 my-auto">
+								<div class="input-group">
+									<input type="number" id="quantity">
+								</div>
+							</div>
+
+
+							<div class="col-12 col-md-4 col-lg-3 my-auto">
+								<p class="font-weight-bold">
+									Rs xx
+								</p>
+							</div>
+
+
+							<div class="col-12 col-md-4 col-lg-3 my-auto">
+								<button class="btn btn-primary">Remove from Cart</button>
+							</div>
+
+						</div>
+					</div>
+					<div class="card  border border-warning my-3">
+						<div class="row">
+
+
+							<div class="col-12 col-md-4 col-lg-3 my-auto">
+								<h4 class="card-title">Pizza</h4>
+							</div>
+
+
+							<div class="col-12 col-md-4 col-lg-3 my-auto">
+								<div class="input-group">
+									<input type="number" id="quantity">
+								</div>
+
+							</div>
+
+
+							<div class="col-12 col-md-4 col-lg-3 my-auto">
+								<p class="font-weight-bold">
+									Rs xx
+								</p>
+
+							</div>
+
+							<div class="col-12 col-md-4 col-lg-3 my-auto">
+								<button class="btn btn-primary">Remove from Cart</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card  border border-dark my-2">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-6 col-md-6 col-lg-6 my-auto">
+							<h3 class="text-left">Subtotal</h3>
+						</div>
+						<div class="col-6 col-md-6 col-lg-6 my-auto">
+							<h3 class="text-right">Rs xx</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6 col-md-6 col-lg-6 my-auto">
+						<p class="text-left font-weight-light">(inclusive of all taxes)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>
